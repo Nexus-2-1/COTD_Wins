@@ -28,3 +28,12 @@ jobs:
       # Step 4: Run your Python script
       - name: Run Python script
         run: python updater.py
+
+      # Step 5: Commit and push changes if any
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add .
+          git commit -m "Updated data.json from GitHub Actions" || echo "No changes to commit"
+          git push origin main

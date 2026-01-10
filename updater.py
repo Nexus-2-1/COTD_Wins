@@ -93,6 +93,8 @@ def getWinners():
         if winner["score"] == 0: cotd["winner"] = None #no data from then (cotd to old)
         else:                    cotd["winner"] = {"id":winner["player"]["id"], "name":winner["player"]["name"]}
 
+        print(f"Date: {cotd['date']} | Winner: {cotd['winner']['name']}")
+
         save()
         sleep(1.5) #delay to throttle to 40 reqests/min
 
