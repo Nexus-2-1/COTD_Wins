@@ -1,0 +1,29 @@
+name: Run Python Script Daily
+
+on:
+  schedule:
+    # Runs daily at 20:00 UTC
+    - cron: '0 20 * * *'
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout your repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Python 3.x
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      # Step 3: Install requests library
+      - name: Install dependencies
+        run: pip install requests
+
+      # Step 4: Run your Python script
+      - name: Run Python script
+        run: python updater.py
