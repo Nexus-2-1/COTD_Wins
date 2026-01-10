@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COTD Wins</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div id="theme_toggle_border">
+        <img id="theme-toggle" src="theme.png" alt="darkmode" class="logo"/>
+    </div>
+
+    <div id="title">
+        <img src="trophy.png" alt="trophy" class="trophy_logo"/>
+        COTD Wins
+    </div>
+
+    <div class="buttons">
+        <button id="resetZoom" onclick="resetZoom()">Reset Zoom</button>
+        <select name="year" id="yearSelection" onchange="showYear()"></select>
+        
+        <select name="player" id="playerSelection" onclick="playerSelected()">
+            <option value="none">Add Player</option>
+        </select>
+
+        <label for="sortBy" id="sortByLabel">Sort By:</label>
+        <select name="sortBy" id="sortBy" onchange="generatePlayerList()">
+            <option value="name">Name</option>
+            <option value="wins">Wins</option>
+        </select>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="multiAxisChart"></canvas>
+    </div>
+
+    <img src="logo.png" alt="Trackmania Logo" id="logo"/>
+
+
+    <div id="credits">
+        <p>Created by Nexus21</p>
+        <p>Powered by <a href="https://trackmania.io/cotd/#/cotd" target="_blank">Trackmania.io</a></p>
+    </div>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.0/dist/chartjs-plugin-zoom.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
