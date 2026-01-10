@@ -34,7 +34,7 @@ function SortPlayersByWins(year){
 }
 
 function getData(){
-  fetch('/data.json')
+  fetch('./data.json')
   .then(response => response.json())
   .then(data_ => {
     data = data_;
@@ -372,3 +372,4 @@ window.addEventListener('resize', () => {
   calculateChartSize();
   chart.resize();
 });
+
