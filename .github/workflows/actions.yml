@@ -1,8 +1,11 @@
 name: Update COTD data
 
+permissions:
+  contents: write  # allows committing and pushing files
+  id-token: write  # sometimes required for certain actions
+
 on:
   schedule:
-    # Runs daily at 20:00 UTC
     - cron: '0 20 * * *'
   workflow_dispatch:
 
@@ -11,31 +14,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository with write permissions
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # Step 2: Set up Python 3.x
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      # Step 3: Install requests library
       - name: Install dependencies
         run: pip install requests
 
-      # Step 4: Run your Python script
       - name: Run Python script
         run: python updater.py
 
-      # Step 5: Commit and push changes if any
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add .
-          git commit -m "Updated data.json from GitHub Actions" || echo "No changes to commit"
+          git commit -m "Update files from GitHub Actions" || echo "No changes to commit"
           git push origin main
