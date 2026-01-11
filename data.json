@@ -15102,5 +15102,21 @@
       "id": "05477e79-25fd-48c2-84c7-e1621aa46517",
       "name": "GranaDy."
     }
+  },
+  {
+    "id": 40466,
+    "date": "10 01 2026",
+    "winner": {
+      "id": "dae72d20-d7d1-4908-ac8b-9ae1994cb3b4",
+      "name": "noiszia"
+    }
+  },
+  {
+    "id": 40486,
+    "date": "11 01 2026",
+    "winner": {
+      "id": "05477e79-25fd-48c2-84c7-e1621aa46517",
+      "name": "GranaDy."
+    }
   }
 ]
