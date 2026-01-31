@@ -18,7 +18,7 @@ def load():
 
 def getCompIDs():
     global data
-    url = "https://trackmania.io/api/cotd/{index}?platform=crossplay"
+    url = "https://trackmania.io/api/cups/cotd/{index}?platform=crossplay"
     headers = {
         "Accept": "*/*",
         "User-Agent": (
