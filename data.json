@@ -15494,5 +15494,13 @@
       "id": "9ebb2ece-61a8-4dbf-9173-25b9d64ad117",
       "name": "BarbosTM"
     }
+  },
+  {
+    "id": 41428,
+    "date": "28 02 2026",
+    "winner": {
+      "id": "916bcde8-38f9-4399-a4e0-8c13aedc29fd",
+      "name": "purple_tm"
+    }
   }
 ]
