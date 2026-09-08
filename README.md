@@ -12,7 +12,7 @@ It is also possible to show individual years and add other player to the graph.
 
 The project is hosted here:
 
-- **Main site:** https://nexushost.space  
+- **Main site:** https://nexushost.site
 - **Or on GitHub** https://nexus-2-1.github.io/COTD_Wins
 
 
